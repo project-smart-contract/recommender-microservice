@@ -1,0 +1,6 @@
+flask~=2.2.5
+pymongo~=4.6.1
+pytz
+apache-airflow-providers-mongo
+pandas~=2.1.4
+scikit-learn~=1.3.2

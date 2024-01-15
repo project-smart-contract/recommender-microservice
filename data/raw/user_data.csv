@@ -1,0 +1,9 @@
+_id,fullname,age,parent,occupation,vehicle_year,vehicle_age,car_make,car_model,car_type,number_insured_cars,business_size,business_field,timestamp
+65a53cb2e8f90a3d99957e62,Hicham Hamza,56,True,teacher,2020,3,dacia,logan,,,,,2024-01-15T14:09:48.080Z
+65a53d34e8f90a3d99957e63,Aya Hamza,20,False,student,2020,1,audi rs,Q5,,,,,2024-01-15T14:12:04.779Z
+65a53da5e8f90a3d99957e64,Mohammed El Bakkali El Ammari,25,,CEO,,,,,trucks,5,TPE,merchandise delivery,2024-01-15T14:13:57.349Z
+65a53debe8f90a3d99957e65,Mokhtar Hamza,60,,Taxi owner,,,,,car,1,Individual Owner,Taxi Services,2024-01-15T14:15:07.741Z
+65a53e34e8f90a3d99957e66,Said Benjelloun,40,,CEO,,,,,car,20,Large sized business,IT enterprise,2024-01-15T14:16:20.716Z
+65a53e80e8f90a3d99957e67,Kamilia Hamza,22,False,doctor,2017,3,toyota,chr,,,,,2024-01-15T14:17:35.984Z
+
+
