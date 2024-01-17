@@ -1,9 +1,11 @@
-_id,fullname,age,parent,occupation,vehicle_year,vehicle_age,car_make,car_model,car_type,number_insured_cars,business_size,business_field,timestamp
-65a53cb2e8f90a3d99957e62,Hicham Hamza,56,True,teacher,2020,3,dacia,logan,,,,,2024-01-15T14:09:48.080Z
-65a53d34e8f90a3d99957e63,Aya Hamza,20,False,student,2020,1,audi rs,Q5,,,,,2024-01-15T14:12:04.779Z
-65a53da5e8f90a3d99957e64,Mohammed El Bakkali El Ammari,25,,CEO,,,,,trucks,5,TPE,merchandise delivery,2024-01-15T14:13:57.349Z
-65a53debe8f90a3d99957e65,Mokhtar Hamza,60,,Taxi owner,,,,,car,1,Individual Owner,Taxi Services,2024-01-15T14:15:07.741Z
-65a53e34e8f90a3d99957e66,Said Benjelloun,40,,CEO,,,,,car,20,Large sized business,IT enterprise,2024-01-15T14:16:20.716Z
-65a53e80e8f90a3d99957e67,Kamilia Hamza,22,False,doctor,2017,3,toyota,chr,,,,,2024-01-15T14:17:35.984Z
-
-
+_id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,vehicle_year,number_seats,business_field,number_insured_vehicles,business_size,timestamp
+65a713cc1dfebcf6ca173f0d,Aya Hamza,20,False,student,True,car,audi,rs q4,2020,5,,,,2024-01-16T23:39:56.689Z
+65a714291dfebcf6ca173f0e,Hicham Hamza,56,True,teacher,True,car,dacia,logan,2021,5,,,,2024-01-16T23:41:29.796Z
+65a714641dfebcf6ca173f0f,Kamilia Hamza,19,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,,2024-01-16T23:42:28.869Z
+65a71c7f1dfebcf6ca173f11,Mohammed El Bakkali El Ammari,25,,CEO,,car,,,,5,IT services,20,GE,2024-01-17T00:17:03.091Z
+65a71f2e1dfebcf6ca173f12,Mokhtar Hamza,60,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,,2024-01-17T00:28:30.752Z
+65a720ac1dfebcf6ca173f13,Said Benjelloun,40,,CEO,,truck,,,,2,Transport de marchandise,5,TPE,2024-01-17T00:34:52.576Z
+65a722bb1dfebcf6ca173f14,anas znagi,37,,CEO,,bus,,,,20,Transport publique de voyageurs,10,ETI,2024-01-17T00:43:39.183Z
+65a723fd1dfebcf6ca173f15,Laila Sabri,49,True,employe,True,car,fiat,500,2021,5,,,,2024-01-17T00:49:01.008Z
+65a724811dfebcf6ca173f16,Aya Kammah,23,False,employe,False,car,tesla,s,2022,5,,,,2024-01-17T00:51:13.056Z
+65a724ed1dfebcf6ca173f17,Ihsan El bakkali EL ammari,30,True,architect,True,car,toyota,chr,2021,5,,,,2024-01-17T00:53:01.050Z

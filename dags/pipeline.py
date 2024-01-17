@@ -23,11 +23,11 @@ default_args = {
 )
 def recommendation_system_pipeline():
     @task()
-    def fetch_new_data_from_mongo():
+    def fetch_new_data_from_mongo(collection_name):
         try:
             hook = MongoHook(mongo_conn_id='mongo_default')
             client = hook.get_conn()
-            user_data = client.Assurance.user_data
+            user_data = client.Assurance[collection_name]
             print(f"Connected to MongoDB - {client.server_info()}")
             two_days_ago = datetime.utcnow() - timedelta(days=1)
             two_days_ago = two_days_ago.replace(microsecond=0)  # Remove microseconds for comparison
@@ -53,9 +53,9 @@ def recommendation_system_pipeline():
             return None
 
     @task()
-    def append_to_csv(data_list):
+    def append_to_csv(data_list, path):
         try:
-            csv_file_path = '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv'
+            csv_file_path = path
 
             # If the data_list is not empty, write to the CSV file
             if data_list:
@@ -64,7 +64,8 @@ def recommendation_system_pipeline():
                     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
                     # Write the header -> to write the field names
-                    # writer.writeheader()
+                    # if csvfile.tell() == 0:
+                    #     writer.writeheader()
 
                     # Write the data
                     writer.writerows(data_list)
@@ -76,28 +77,16 @@ def recommendation_system_pipeline():
         except Exception as e:
             print(f"Error writing data to CSV -- {e}")
 
-    mongo_collection = fetch_new_data_from_mongo()
+    user_data_collection = fetch_new_data_from_mongo("user_data")
+    data = append_to_csv(user_data_collection, '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
 
-    # new_data_to_append = [
-    #     {
-    #         '_id': 'test_id_1',
-    #         'fullname': 'Test User 1',
-    #         'age': 30,
-    #         'parent': True,
-    #         'occupation': 'Engineer',
-    #         'vehicle_year': 2022,
-    #         'vehicle_age': 1,
-    #         'car_make': 'Test Make',
-    #         'car_model': 'Test Model',
-    #         'car_type': 'Test Type',
-    #         'number_insured_cars': 2,
-    #         'business_size': 'Test Size',
-    #         'business_field': 'Test Field',
-    #         'timestamp': '2024-01-15T14:30:00.000Z'
-    #     },
-    # ]
+    insurance_data_collection = fetch_new_data_from_mongo("insurance_policies")
+    data = append_to_csv(insurance_data_collection,
+                         '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
 
-    data = append_to_csv(mongo_collection)
+    contract_data_collection = fetch_new_data_from_mongo("contract_record")
+    data = append_to_csv(contract_data_collection,
+                         '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
 
 
 summary = recommendation_system_pipeline()

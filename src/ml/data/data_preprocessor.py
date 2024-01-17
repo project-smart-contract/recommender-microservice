@@ -1,8 +1,27 @@
+import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
+from src.ml.data.data_loader import load_raw_data
+from sklearn import preprocessing
 
 
-def preprocess_data(raw_data):
+def clean_and_transform_data(raw_data):
+
+    processed_data = raw_data.fillna(value='unknown')
+
+    processed_data['timestamp'] = pd.to_datetime(processed_data['timestamp'])
+
+    return processed_data
+
+
+def save_processed_data(processed_data, processed_data_path):
+    # Implement your logic to save processed data to a file
+    # This function should take processed data and a file path as input
+    # For example, if using pandas to save a DataFrame to CSV:
+    processed_data.to_csv(processed_data_path, index=False)
+
+
+def preprocess_data(raw_data_path, processed_data_path):
     """
     Preprocess raw data for recommendation system.
 
@@ -12,21 +31,12 @@ def preprocess_data(raw_data):
     Returns:
     - tuple: Tuple containing preprocessed data (X_train, X_test).
     """
-    try:
-        # Extract features and target variable
-        features = raw_data.drop(columns=['target_variable'])
-        target = raw_data['target_variable']
+    # load data
+    raw_data = load_raw_data(raw_data_path)
 
-        # Split the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
+    # Clean and transform data
+    processed_data = clean_and_transform_data(raw_data)
 
-        # Optionally, perform additional preprocessing steps, such as scaling
-        scaler = StandardScaler()
-        X_train_scaled = scaler.fit_transform(X_train)
-        X_test_scaled = scaler.transform(X_test)
+    # Save processed data
+    save_processed_data(processed_data, processed_data_path)
 
-        return X_train_scaled, X_test_scaled
-
-    except Exception as e:
-        print(f"Error preprocessing data: {e}")
-        return None, None

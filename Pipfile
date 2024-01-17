@@ -10,6 +10,8 @@ apache-airflow = "*"
 pandas = "*"
 jupyter = "*"
 scikit-learn = "*"
+matplotlib = "*"
+seaborn = "*"
 
 [dev-packages]
 
