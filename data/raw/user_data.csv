@@ -2,10 +2,7 @@ _id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,v
 65a713cc1dfebcf6ca173f0d,Aya Hamza,20,False,student,True,car,audi,rs q4,2020,5,,,2024-01-16T23:39:56.689Z
 65a714291dfebcf6ca173f0e,Hicham Hamza,56,True,teacher,True,car,dacia,logan,2021,5,,,2024-01-16T23:41:29.796Z
 65a714641dfebcf6ca173f0f,Kamilia Hamza,19,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-16T23:42:28.869Z
-65a71c7f1dfebcf6ca173f11,Mohammed El Bakkali El Ammari,25,,CEO,,car,,,,5,IT services,20,2024-01-17T00:17:03.091Z
 65a71f2e1dfebcf6ca173f12,Mokhtar Hamza,60,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-17T00:28:30.752Z
-65a720ac1dfebcf6ca173f13,Said Benjelloun,40,,CEO,,truck,,,,2,Transport de marchandise,5,2024-01-17T00:34:52.576Z
-65a722bb1dfebcf6ca173f14,anas znagi,37,,CEO,,bus,,,,20,Transport publique de voyageurs,10,2024-01-17T00:43:39.183Z
 65a723fd1dfebcf6ca173f15,Laila Sabri,49,True,employe,True,car,fiat,500,2021,5,,,2024-01-17T00:49:01.008Z
 65a724811dfebcf6ca173f16,Aya Kammah,23,False,employe,False,car,tesla,s,2022,5,,,2024-01-17T00:51:13.056Z
 65a724ed1dfebcf6ca173f17,Ihsan El bakkali EL ammari,30,True,architect,True,car,toyota,chr,2021,5,,,2024-01-17T00:53:01.050Z
@@ -28,23 +25,12 @@ _id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,v
 65a9bcfb02478feb98fc38e0,kamilia cluster,18,False,student,True,motorcycle,cappuccino,50cc,2018,2,,,2024-01-19T00:06:19.029Z
 65a9bd0702478feb98fc38e1,kamilia cluster,18,False,student,False,motorcycle,cappuccino,50cc,2017,2,,,2024-01-19T00:06:31.210Z
 65a9bd1602478feb98fc38e2,kamilia cluster,19,False,student,True,motorcycle,cappuccino,50cc,2020,2,,,2024-01-19T00:06:46.564Z
-65a9bedf02478feb98fc38e3,mohammed cluster,34,,CEO,,car,,,,5,industrial services,25,2024-01-19T00:14:23.551Z
 65a9bf5a02478feb98fc38e4,mokhtar cluster,55,,taxi owner,,car,dacia,lodge,,6,Transport publique de voyageurs,1,2024-01-19T00:16:26.027Z
 65a9bf6502478feb98fc38e5,mokhtar cluster,55,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:16:37.735Z
 65a9bf7202478feb98fc38e6,mokhtar cluster,50,,taxi owner,,car,dacia,lodge,,5,Transport publique de voyageurs,1,2024-01-19T00:16:50.527Z
 65a9bf7d02478feb98fc38e7,mokhtar cluster,50,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:17:01.465Z
 65a9bf8502478feb98fc38e8,mokhtar cluster,53,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:17:09.452Z
 65a9bf9002478feb98fc38e9,mokhtar cluster,59,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:17:20.293Z
-65a9c03b02478feb98fc38eb,said cluster,50,,CEO,,truck,,,,2,Transport marchandises,6,2024-01-19T00:20:11.319Z
-65a9c04902478feb98fc38ec,said cluster,45,,CEO,,truck,,,,2,Transport marchandises,4,2024-01-19T00:20:25.051Z
-65a9c04e02478feb98fc38ed,said cluster,45,,CEO,,truck,,,,2,Transport marchandises,5,2024-01-19T00:20:30.513Z
-65a9c05f02478feb98fc38ee,said cluster,47,,CEO,,truck,,,,3,Transport marchandises,6,2024-01-19T00:20:47.900Z
-65a9c06702478feb98fc38ef,said cluster,47,,CEO,,truck,,,,3,Transport marchandises,5,2024-01-19T00:20:55.628Z
-65a9c0a902478feb98fc38f0,anas cluster,47,,CEO,,bus,,,,20,Transport publique de voyageurs,15,2024-01-19T00:22:01.194Z
-65a9c0b302478feb98fc38f1,anas cluster,47,,CEO,,bus,,,,30,Transport publique de voyageurs,11,2024-01-19T00:22:11.270Z
-65a9c0c002478feb98fc38f2,anas cluster,47,,CEO,,bus,,,,15,Transport publique de voyageurs,11,2024-01-19T00:22:24.160Z
-65a9c0c702478feb98fc38f3,anas cluster,47,,CEO,,bus,,,,20,Transport publique de voyageurs,11,2024-01-19T00:22:31.514Z
-65a9c0d502478feb98fc38f4,anas cluster,40,,CEO,,bus,,,,20,Transport publique de voyageurs,15,2024-01-19T00:22:45.585Z
 65a9c13802478feb98fc38f5,laila cluster,46,True,employe,True,car,fiat,500,2021,5,,,2024-01-19T00:24:24.939Z
 65a9c16f02478feb98fc38f6,laila cluster,48,True,employe,True,car,fiat,500,2020,5,,,2024-01-19T00:25:19.234Z
 65a9c17302478feb98fc38f7,laila cluster,48,True,employe,True,car,fiat,500,2021,5,,,2024-01-19T00:25:23.669Z
@@ -60,3 +46,38 @@ _id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,v
 65a9c23902478feb98fc3901,ihsan cluster,35,True,doctor,True,car,toyota,chr,2020,5,,,2024-01-19T00:28:40.999Z
 65a9c24302478feb98fc3902,ihsan cluster,35,True,doctor,False,car,toyota,chr,2020,5,,,2024-01-19T00:28:51.502Z
 65a9c24b02478feb98fc3903,ihsan cluster,35,False,doctor,True,car,toyota,chr,2020,5,,,2024-01-19T00:28:59.438Z
+65aa90b65cb4f5930d2b2562,mohammed cluster,,,CEO,,car,,,,5,Marketing services,23,2024-01-19T15:09:42.348Z
+65aa90bf5cb4f5930d2b2563,mohammed cluster,,,CEO,,car,,,,5,Digital services,23,2024-01-19T15:09:51.353Z
+65aa90e25cb4f5930d2b2564,mohammed cluster,,,CEO,,car,,,,5,Port,25,2024-01-19T15:10:26.426Z
+65aa91c15cb4f5930d2b2565,mohammed cluster,,,CEO,,car,,,,5,services diverts,24,2024-01-19T15:14:09.959Z
+65aa91de5cb4f5930d2b2566,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,18,2024-01-19T15:14:38.087Z
+65aa91e55cb4f5930d2b2567,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,19,2024-01-19T15:14:45.223Z
+65aa92005cb4f5930d2b2568,mohammed cluster,,,CEO,,car,,,,5,IT services,12,2024-01-19T15:15:12.490Z
+65aa92175cb4f5930d2b2569,mohammed cluster,,,CEO,,car,,,,5,IT services,12,2024-01-19T15:15:35.626Z
+65aa921e5cb4f5930d2b256a,mohammed cluster,,,CEO,,car,,,,5,IT services,15,2024-01-19T15:15:42.235Z
+65aa923b5cb4f5930d2b256b,Mohammed El Bakkali El Ammari,,,CEO,,car,,,,5,IT services,20,2024-01-19T15:16:11.349Z
+65aa92e15cb4f5930d2b256c,Said Benjelloun,,,CEO,,truck,,,,2,Transport de marchandise,5,2024-01-19T15:18:57.243Z
+65aa93a35cb4f5930d2b256d,Said cluster,,,CEO,,truck,,,,2,Transport de marchandise,4,2024-01-19T15:22:11.128Z
+65aa93a65cb4f5930d2b256e,Said cluster,,,CEO,,truck,,,,2,Transport de marchandise,3,2024-01-19T15:22:14.755Z
+65aa93ab5cb4f5930d2b256f,Said cluster,,,CEO,,truck,,,,3,Transport de marchandise,3,2024-01-19T15:22:19.338Z
+65aa93ae5cb4f5930d2b2570,Said cluster,,,CEO,,truck,,,,3,Transport de marchandise,5,2024-01-19T15:22:22.390Z
+65aa93b65cb4f5930d2b2571,Said cluster,,,CEO,,truck,,,,3,Transport de marchandise,4,2024-01-19T15:22:30.132Z
+65aa94135cb4f5930d2b2572,Said cluster,,,CEO,,truck,,,,3,Transport de marchandise,2,2024-01-19T15:24:03.719Z
+65aa941a5cb4f5930d2b2573,Said cluster,,,CEO,,truck,,,,2,Transport de marchandise,2,2024-01-19T15:24:10.335Z
+65aa95195cb4f5930d2b2574,Hind Halhoul,,,CEO,,bus,,,,20,Transport publique de voyageurs,10,2024-01-19T15:28:25.245Z
+65aa95395cb4f5930d2b2575,Hind Halhoul,,,CEO,,bus,,,,20,Transport publique de voyageurs,10,2024-01-19T15:28:57.984Z
+65aa95605cb4f5930d2b2576,Hind cluster,,,CEO,,bus,,,,22,Transport publique de voyageurs,12,2024-01-19T15:29:36.958Z
+65aa95685cb4f5930d2b2577,Hind cluster,,,CEO,,bus,,,,22,Transport publique de voyageurs,11,2024-01-19T15:29:44.756Z
+65aa95705cb4f5930d2b2578,Hind cluster,,,CEO,,bus,,,,20,Transport publique de voyageurs,11,2024-01-19T15:29:52.219Z
+65aa95785cb4f5930d2b2579,Hind cluster,,,CEO,,bus,,,,20,Transport publique de voyageurs,8,2024-01-19T15:30:00.908Z
+65aa95835cb4f5930d2b257a,Hind cluster,,,CEO,,bus,,,,20,Transport publique de voyageurs,9,2024-01-19T15:30:11.330Z
+65aa95895cb4f5930d2b257b,Hind cluster,,,CEO,,bus,,,,21,Transport publique de voyageurs,9,2024-01-19T15:30:17.304Z
+65aa95925cb4f5930d2b257c,Hind cluster,,,CEO,,bus,,,,21,Transport publique de voyageurs,7,2024-01-19T15:30:26.164Z
+65aa95965cb4f5930d2b257d,Hind cluster,,,CEO,,bus,,,,20,Transport publique de voyageurs,7,2024-01-19T15:30:30.640Z
+65aa95b45cb4f5930d2b257e,Hind cluster,,,CEO,,bus,,,,25,Transport publique de voyageurs,10,2024-01-19T15:31:00.936Z
+65aa960e5cb4f5930d2b257f,kamilia cluster,20,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:32:30.833Z
+65aa961b5cb4f5930d2b2580,kamilia cluster,20,False,student,False,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:32:43.906Z
+65aa96245cb4f5930d2b2581,kamilia cluster,18,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:32:52.242Z
+65aa96295cb4f5930d2b2582,kamilia cluster,17,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:32:57.386Z
+65aa96325cb4f5930d2b2583,kamilia cluster,17,False,student,False,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:33:06.099Z
+65aa96445cb4f5930d2b2584,kamilia cluster,21,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:33:24.643Z

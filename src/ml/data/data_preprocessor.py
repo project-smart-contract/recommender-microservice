@@ -22,6 +22,7 @@ def preprocess_data(raw_data_path, processed_data_path):
 
     processed_data["vehicle_year"].fillna(value=0, inplace=True)
     processed_data["number_insured_vehicles"].fillna(value=0, inplace=True)
+    processed_data["age"].fillna(value=0, inplace=True)
     processed_data.fillna(value='unknown', inplace=True)
 
     # dropping these cols because we do not need it at this stage of code
@@ -84,9 +85,7 @@ def preprocess_data(raw_data_path, processed_data_path):
     scaled_data = scaler.fit_transform(selected_columns)
 
     processed_data.iloc[:, 1:13] = scaled_data
-    print(processed_data)
 
-    # ///////////////////////
     numeric_columns = ['parent', 'age', 'occupation', 'www', 'vehicle_type', 'number_seats',
                        'business_field', 'number_insured_vehicles', 'vehicle_range', 'vehicle_category',
                        'vehicle_state']
@@ -103,7 +102,11 @@ def preprocess_data(raw_data_path, processed_data_path):
     # Create new DataFrame with PCA components
     pca_df = pd.DataFrame(data=pca_data, columns=['PCA1', 'PCA2', 'PCA3'])
 
-    # Concatenate the original DataFrame excluding numeric_columns with the PCA DataFrame
+    # Concatenate the original DataFrame and dropping numeric_columns with the PCA DataFrame
     processed_data = pd.concat([processed_data.drop(columns=numeric_columns), pca_df], axis=1)
+    print(processed_data)
+
+    processed_data.to_csv('/Users/aya/Desktop/ML/insurance-recommender/data/processed/processed_user_data.csv',
+                          index=False)
 
     return processed_data

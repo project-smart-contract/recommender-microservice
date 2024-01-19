@@ -1,6 +1,7 @@
 # app.py
 from flask import Flask, request, jsonify
-from main.src import create_mongo_client, ping_mongo_deployment
+
+from src.config.db import create_mongo_client, ping_mongo_deployment
 
 app = Flask(__name__)
 
