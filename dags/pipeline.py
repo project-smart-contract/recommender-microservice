@@ -1,11 +1,9 @@
-from airflow.decorators import dag, task
-from datetime import datetime, timedelta
-from airflow.providers.mongo.hooks.mongo import MongoHook
-import json
 import csv
-import os
-from bson import json_util
-from bson import ObjectId
+from datetime import datetime, timedelta
+from airflow.decorators import dag, task
+from airflow.providers.mongo.hooks.mongo import MongoHook
+
+from src.ml.data.data_preprocessor import preprocess_data
 
 default_args = {
     'owner': 'admin',
@@ -65,7 +63,7 @@ def recommendation_system_pipeline():
 
                     # Write the header -> to write the field names
                     # if csvfile.tell() == 0:
-                    #     writer.writeheader()
+                    # writer.writeheader()
 
                     # Write the data
                     writer.writerows(data_list)
@@ -77,16 +75,23 @@ def recommendation_system_pipeline():
         except Exception as e:
             print(f"Error writing data to CSV -- {e}")
 
-    user_data_collection = fetch_new_data_from_mongo("user_data")
-    data = append_to_csv(user_data_collection, '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
+    # user_data_collection = fetch_new_data_from_mongo("user_data")
+    # data = append_to_csv(user_data_collection, '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
 
-    insurance_data_collection = fetch_new_data_from_mongo("insurance_policies")
-    data = append_to_csv(insurance_data_collection,
-                         '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
+    # insurance_data_collection = fetch_new_data_from_mongo("insurance_policies")
+    # data = append_to_csv(insurance_data_collection,
+    #                      '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
+    #
+    # contract_data_collection = fetch_new_data_from_mongo("contract_record")
+    # data = append_to_csv(contract_data_collection,
+    #                      '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
 
-    contract_data_collection = fetch_new_data_from_mongo("contract_record")
-    data = append_to_csv(contract_data_collection,
-                         '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
+    @task()
+    def process_data():
+        preprocess_data('/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv',
+                        '/Users/aya/Desktop/ML/insurance-recommender/data/processed/processed_user_data.csv')
+
+    process_data()
 
 
 summary = recommendation_system_pipeline()

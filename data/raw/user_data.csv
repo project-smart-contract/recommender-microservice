@@ -1,11 +1,62 @@
-_id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,vehicle_year,number_seats,business_field,number_insured_vehicles,business_size,timestamp
-65a713cc1dfebcf6ca173f0d,Aya Hamza,20,False,student,True,car,audi,rs q4,2020,5,,,,2024-01-16T23:39:56.689Z
-65a714291dfebcf6ca173f0e,Hicham Hamza,56,True,teacher,True,car,dacia,logan,2021,5,,,,2024-01-16T23:41:29.796Z
-65a714641dfebcf6ca173f0f,Kamilia Hamza,19,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,,2024-01-16T23:42:28.869Z
-65a71c7f1dfebcf6ca173f11,Mohammed El Bakkali El Ammari,25,,CEO,,car,,,,5,IT services,20,GE,2024-01-17T00:17:03.091Z
-65a71f2e1dfebcf6ca173f12,Mokhtar Hamza,60,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,,2024-01-17T00:28:30.752Z
-65a720ac1dfebcf6ca173f13,Said Benjelloun,40,,CEO,,truck,,,,2,Transport de marchandise,5,TPE,2024-01-17T00:34:52.576Z
-65a722bb1dfebcf6ca173f14,anas znagi,37,,CEO,,bus,,,,20,Transport publique de voyageurs,10,ETI,2024-01-17T00:43:39.183Z
-65a723fd1dfebcf6ca173f15,Laila Sabri,49,True,employe,True,car,fiat,500,2021,5,,,,2024-01-17T00:49:01.008Z
-65a724811dfebcf6ca173f16,Aya Kammah,23,False,employe,False,car,tesla,s,2022,5,,,,2024-01-17T00:51:13.056Z
-65a724ed1dfebcf6ca173f17,Ihsan El bakkali EL ammari,30,True,architect,True,car,toyota,chr,2021,5,,,,2024-01-17T00:53:01.050Z
+_id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,vehicle_year,number_seats,business_field,number_insured_vehicles,timestamp
+65a713cc1dfebcf6ca173f0d,Aya Hamza,20,False,student,True,car,audi,rs q4,2020,5,,,2024-01-16T23:39:56.689Z
+65a714291dfebcf6ca173f0e,Hicham Hamza,56,True,teacher,True,car,dacia,logan,2021,5,,,2024-01-16T23:41:29.796Z
+65a714641dfebcf6ca173f0f,Kamilia Hamza,19,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-16T23:42:28.869Z
+65a71c7f1dfebcf6ca173f11,Mohammed El Bakkali El Ammari,25,,CEO,,car,,,,5,IT services,20,2024-01-17T00:17:03.091Z
+65a71f2e1dfebcf6ca173f12,Mokhtar Hamza,60,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-17T00:28:30.752Z
+65a720ac1dfebcf6ca173f13,Said Benjelloun,40,,CEO,,truck,,,,2,Transport de marchandise,5,2024-01-17T00:34:52.576Z
+65a722bb1dfebcf6ca173f14,anas znagi,37,,CEO,,bus,,,,20,Transport publique de voyageurs,10,2024-01-17T00:43:39.183Z
+65a723fd1dfebcf6ca173f15,Laila Sabri,49,True,employe,True,car,fiat,500,2021,5,,,2024-01-17T00:49:01.008Z
+65a724811dfebcf6ca173f16,Aya Kammah,23,False,employe,False,car,tesla,s,2022,5,,,2024-01-17T00:51:13.056Z
+65a724ed1dfebcf6ca173f17,Ihsan El bakkali EL ammari,30,True,architect,True,car,toyota,chr,2021,5,,,2024-01-17T00:53:01.050Z
+65a9978502478feb98fc38cf,aya cluster,25,False,student,True,car,audi,rs q4,2022,5,,,2024-01-18T21:26:29.925Z
+65a9a24802478feb98fc38d0,aya cluster,23,False,student,True,car,audi,rs q4,2022,4,,,2024-01-18T22:12:24.937Z
+65a9a25202478feb98fc38d1,aya cluster,21,False,student,True,car,audi,rs q4,2022,5,,,2024-01-18T22:12:34.698Z
+65a9a25b02478feb98fc38d2,aya cluster,21,False,student,True,car,audi,rs q4,2022,5,,,2024-01-18T22:12:43.458Z
+65a9a27602478feb98fc38d3,aya cluster,20,False,student,False,car,audi,rs q4,2022,5,,,2024-01-18T22:13:10.897Z
+65a9a31102478feb98fc38d4,aya cluster,20,False,student,True,car,audi,rs q4,2022,8,,,2024-01-18T22:15:45.440Z
+65a9a69502478feb98fc38d5,hicham cluster,50,True,teacher,True,car,dacia,logan,2021,6,,,2024-01-18T22:30:45.286Z
+65a9a69c02478feb98fc38d6,hicham cluster,53,True,teacher,True,car,dacia,logan,2021,6,,,2024-01-18T22:30:52.014Z
+65a9a6a802478feb98fc38d8,hicham cluster,57,True,teacher,True,car,dacia,logan,2021,5,,,2024-01-18T22:31:04.256Z
+65a9a6b302478feb98fc38d9,hicham cluster,58,True,teacher,True,car,dacia,logan,2021,6,,,2024-01-18T22:31:15.436Z
+65a9a6bd02478feb98fc38da,hicham cluster,56,True,teacher,False,car,dacia,logan,2021,6,,,2024-01-18T22:31:25.827Z
+65a9a6ca02478feb98fc38db,hicham cluster,56,False,teacher,True,car,dacia,logan,2021,6,,,2024-01-18T22:31:38.500Z
+65a9a77b02478feb98fc38dc,hicham cluster,56,False,teacher,True,car,dacia,logan,2021,6,,,2024-01-18T22:34:35.725Z
+65a9bc6402478feb98fc38dd,hicham cluster,50,True,teacher,False,car,dacia,logan,2021,5,,,2024-01-19T00:03:47.992Z
+65a9bc6e02478feb98fc38de,hicham cluster,50,False,teacher,True,car,dacia,logan,2021,5,,,2024-01-19T00:03:58.096Z
+65a9bcb302478feb98fc38df,hicham cluster,55,True,teacher,True,car,dacia,logan,2021,5,,,2024-01-19T00:05:07.775Z
+65a9bcfb02478feb98fc38e0,kamilia cluster,18,False,student,True,motorcycle,cappuccino,50cc,2018,2,,,2024-01-19T00:06:19.029Z
+65a9bd0702478feb98fc38e1,kamilia cluster,18,False,student,False,motorcycle,cappuccino,50cc,2017,2,,,2024-01-19T00:06:31.210Z
+65a9bd1602478feb98fc38e2,kamilia cluster,19,False,student,True,motorcycle,cappuccino,50cc,2020,2,,,2024-01-19T00:06:46.564Z
+65a9bedf02478feb98fc38e3,mohammed cluster,34,,CEO,,car,,,,5,industrial services,25,2024-01-19T00:14:23.551Z
+65a9bf5a02478feb98fc38e4,mokhtar cluster,55,,taxi owner,,car,dacia,lodge,,6,Transport publique de voyageurs,1,2024-01-19T00:16:26.027Z
+65a9bf6502478feb98fc38e5,mokhtar cluster,55,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:16:37.735Z
+65a9bf7202478feb98fc38e6,mokhtar cluster,50,,taxi owner,,car,dacia,lodge,,5,Transport publique de voyageurs,1,2024-01-19T00:16:50.527Z
+65a9bf7d02478feb98fc38e7,mokhtar cluster,50,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:17:01.465Z
+65a9bf8502478feb98fc38e8,mokhtar cluster,53,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:17:09.452Z
+65a9bf9002478feb98fc38e9,mokhtar cluster,59,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-19T00:17:20.293Z
+65a9c03b02478feb98fc38eb,said cluster,50,,CEO,,truck,,,,2,Transport marchandises,6,2024-01-19T00:20:11.319Z
+65a9c04902478feb98fc38ec,said cluster,45,,CEO,,truck,,,,2,Transport marchandises,4,2024-01-19T00:20:25.051Z
+65a9c04e02478feb98fc38ed,said cluster,45,,CEO,,truck,,,,2,Transport marchandises,5,2024-01-19T00:20:30.513Z
+65a9c05f02478feb98fc38ee,said cluster,47,,CEO,,truck,,,,3,Transport marchandises,6,2024-01-19T00:20:47.900Z
+65a9c06702478feb98fc38ef,said cluster,47,,CEO,,truck,,,,3,Transport marchandises,5,2024-01-19T00:20:55.628Z
+65a9c0a902478feb98fc38f0,anas cluster,47,,CEO,,bus,,,,20,Transport publique de voyageurs,15,2024-01-19T00:22:01.194Z
+65a9c0b302478feb98fc38f1,anas cluster,47,,CEO,,bus,,,,30,Transport publique de voyageurs,11,2024-01-19T00:22:11.270Z
+65a9c0c002478feb98fc38f2,anas cluster,47,,CEO,,bus,,,,15,Transport publique de voyageurs,11,2024-01-19T00:22:24.160Z
+65a9c0c702478feb98fc38f3,anas cluster,47,,CEO,,bus,,,,20,Transport publique de voyageurs,11,2024-01-19T00:22:31.514Z
+65a9c0d502478feb98fc38f4,anas cluster,40,,CEO,,bus,,,,20,Transport publique de voyageurs,15,2024-01-19T00:22:45.585Z
+65a9c13802478feb98fc38f5,laila cluster,46,True,employe,True,car,fiat,500,2021,5,,,2024-01-19T00:24:24.939Z
+65a9c16f02478feb98fc38f6,laila cluster,48,True,employe,True,car,fiat,500,2020,5,,,2024-01-19T00:25:19.234Z
+65a9c17302478feb98fc38f7,laila cluster,48,True,employe,True,car,fiat,500,2021,5,,,2024-01-19T00:25:23.669Z
+65a9c18a02478feb98fc38f8,laila cluster,49,True,employe,True,car,fiat,500,2022,5,,,2024-01-19T00:25:46.109Z
+65a9c19002478feb98fc38f9,laila cluster,49,False,employe,True,car,fiat,500,2022,5,,,2024-01-19T00:25:52.801Z
+65a9c1bd02478feb98fc38fa,kammah cluster,22,False,employe,False,car,tesla,s,2020,5,,,2024-01-19T00:26:37.914Z
+65a9c1c902478feb98fc38fb,kammah cluster,22,False,student,False,car,tesla,s,2020,5,,,2024-01-19T00:26:49.902Z
+65a9c1d202478feb98fc38fc,kammah cluster,22,False,engineer,False,car,tesla,s,2020,5,,,2024-01-19T00:26:58.433Z
+65a9c1e202478feb98fc38fd,kammah cluster,24,False,engineer,False,car,tesla,s,2021,5,,,2024-01-19T00:27:14.677Z
+65a9c1ef02478feb98fc38fe,kammah cluster,24,False,employe,True,car,tesla,s,2021,5,,,2024-01-19T00:27:27.139Z
+65a9c22902478feb98fc38ff,ihsan cluster,35,True,architect,True,car,toyota,chr,2021,5,,,2024-01-19T00:28:25.420Z
+65a9c22d02478feb98fc3900,ihsan cluster,35,True,doctor,True,car,toyota,chr,2021,5,,,2024-01-19T00:28:29.532Z
+65a9c23902478feb98fc3901,ihsan cluster,35,True,doctor,True,car,toyota,chr,2020,5,,,2024-01-19T00:28:40.999Z
+65a9c24302478feb98fc3902,ihsan cluster,35,True,doctor,False,car,toyota,chr,2020,5,,,2024-01-19T00:28:51.502Z
+65a9c24b02478feb98fc3903,ihsan cluster,35,False,doctor,True,car,toyota,chr,2020,5,,,2024-01-19T00:28:59.438Z
