@@ -81,3 +81,8 @@ _id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,v
 65aa96295cb4f5930d2b2582,kamilia cluster,17,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:32:57.386Z
 65aa96325cb4f5930d2b2583,kamilia cluster,17,False,student,False,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:33:06.099Z
 65aa96445cb4f5930d2b2584,kamilia cluster,21,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:33:24.643Z
+65aadc741d099129aa714f80,mohammed cluster,,,CEO,,car,,,,5,services diverts,20,2024-01-19T20:32:52.199Z
+65aadc851d099129aa714f81,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,20,2024-01-19T20:33:09.852Z
+65aadc911d099129aa714f82,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,21,2024-01-19T20:33:21.759Z
+65aadca61d099129aa714f83,mohammed cluster,,,CEO,,car,,,,5,Port,18,2024-01-19T20:33:42.110Z
+65aadcbb1d099129aa714f84,mohammed cluster,,,CEO,,car,,,,5,Digital services,18,2024-01-19T20:34:03.583Z

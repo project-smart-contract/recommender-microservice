@@ -74,8 +74,7 @@ def recommendation_system_pipeline():
 
     @task()
     def process_data():
-        preprocess_data('/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv',
-                        '/Users/aya/Desktop/ML/insurance-recommender/data/processed/processed_user_data.csv')
+        preprocess_data()
 
     user_data_collection = fetch_new_data_from_mongo("user_data")
     data = append_to_csv(user_data_collection, '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')

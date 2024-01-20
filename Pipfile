@@ -12,6 +12,7 @@ jupyter = "*"
 scikit-learn = "*"
 matplotlib = "*"
 seaborn = "*"
+joblib = "*"
 
 [dev-packages]
 
