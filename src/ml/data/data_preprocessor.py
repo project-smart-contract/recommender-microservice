@@ -7,6 +7,7 @@ from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 
 
+# function used in processing 1 datapoint so that we can recommend for him
 def preprocess_datapoint(raw_data):
     processed_data = raw_data
 
@@ -16,8 +17,9 @@ def preprocess_datapoint(raw_data):
     processed_data.fillna(value='unknown', inplace=True)
     # dropping these cols because we do not need it at this stage of code
     processed_data = processed_data.drop(['timestamp', 'fullname'], axis=1)
-    # print("1- filling null values======================================================================================")
-    # print(processed_data)
+    print(
+        "1- filling null values======================================================================================")
+    print(processed_data)
 
     economic_cars = ['dacia', 'renault', 'fiat', 'peugeot', 'ford', 'honda', 'hyundai', 'kia', 'nissan', 'subaru',
                      'toyota', 'volkswagen', 'cappuccino']
@@ -49,8 +51,8 @@ def preprocess_datapoint(raw_data):
         labels=['Vetuste', 'Recent']
     )
     processed_data = processed_data.drop(['vehicle_make', 'vehicle_model', 'vehicle_year'], axis=1)
-    # print("2- categorizing car======================================================================================")
-    # print(processed_data)
+    print("2- categorizing car======================================================================================")
+    print(processed_data)
 
     loaded_label_encoder = joblib.load('/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/label_encoder.joblib')
     loaded_label_encoder2 = joblib.load('/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/label_encoder2.joblib')
@@ -117,7 +119,8 @@ def preprocess_datapoint(raw_data):
     return processed_data
 
 
-def preprocess_data(raw_data_path, processed_data_path):
+# function used in the pipeline
+def preprocess_data(raw_data_path):
     """
        Preprocess raw data for recommendation system.
 
@@ -171,6 +174,7 @@ def preprocess_data(raw_data_path, processed_data_path):
     processed_data = processed_data.drop(['vehicle_make', 'vehicle_model', 'vehicle_year'], axis=1)
 
     label_encoder = preprocessing.LabelEncoder()
+    label_encoder2 = preprocessing.LabelEncoder()
 
     processed_data['occupation'] = label_encoder.fit_transform(processed_data['occupation'])
     processed_data['occupation'].unique()
@@ -185,21 +189,30 @@ def preprocess_data(raw_data_path, processed_data_path):
         {'Diesel': 1, 'Electric': 2, 'Hybrid': 3, 'unknown': 0})
     processed_data['vehicle_state'] = processed_data['vehicle_state'].map({'Vetuste': 1, 'Recent': 2, np.NAN: 0})
 
-    processed_data['business_field'] = label_encoder.fit_transform(processed_data['business_field'])
+    processed_data['business_field'] = label_encoder2.fit_transform(processed_data['business_field'])
     processed_data['business_field'].unique()
 
-    # Extract numeric data
-    selected_columns = processed_data.iloc[:, 1:13]
+    # save label encoders
+    joblib.dump(label_encoder, "/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/label_encoder.joblib")
+    joblib.dump(label_encoder2, "/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/label_encoder2.joblib")
+
+    numeric_columns = ['age', 'parent', 'occupation', 'www', 'vehicle_type', 'number_seats',
+                       'business_field', 'number_insured_vehicles', 'vehicle_range', 'vehicle_category',
+                       'vehicle_state']
+    selected_columns = processed_data[numeric_columns]
 
     # Standardize the data
     scaler = StandardScaler()
     scaled_data = scaler.fit_transform(selected_columns)
 
-    processed_data.iloc[:, 1:13] = scaled_data
+    # Create a DataFrame with the scaled data
+    scaled_df = pd.DataFrame(data=scaled_data, columns=numeric_columns)
 
-    numeric_columns = ['parent', 'age', 'occupation', 'www', 'vehicle_type', 'number_seats',
-                       'business_field', 'number_insured_vehicles', 'vehicle_range', 'vehicle_category',
-                       'vehicle_state']
+    # Replace the original numeric columns with the scaled ones
+    processed_data[numeric_columns] = scaled_df
+
+    # save scaler
+    joblib.dump(scaler, "/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/scaler.joblib")
 
     # Assuming processed_data is your DataFrame
     selected_columns = processed_data[numeric_columns]
@@ -215,6 +228,10 @@ def preprocess_data(raw_data_path, processed_data_path):
 
     # Concatenate the original DataFrame and dropping numeric_columns with the PCA DataFrame
     processed_data = pd.concat([processed_data.drop(columns=numeric_columns), pca_df], axis=1)
+
+    # save the pca transformer
+    joblib.dump(pca, "/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/pca_transformer.joblib")
+
     print(processed_data)
 
     processed_data.to_csv('/Users/aya/Desktop/ML/insurance-recommender/data/processed/processed_user_data.csv',

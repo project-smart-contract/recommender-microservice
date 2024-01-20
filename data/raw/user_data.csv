@@ -5,12 +5,10 @@ _id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,v
 65a71f2e1dfebcf6ca173f12,Mokhtar Hamza,60,,taxi owner,,car,dacia,logan,,3,Transport publique de voyageurs,1,2024-01-17T00:28:30.752Z
 65a723fd1dfebcf6ca173f15,Laila Sabri,49,True,employe,True,car,fiat,500,2021,5,,,2024-01-17T00:49:01.008Z
 65a724811dfebcf6ca173f16,Aya Kammah,23,False,employe,False,car,tesla,s,2022,5,,,2024-01-17T00:51:13.056Z
-65a724ed1dfebcf6ca173f17,Ihsan El bakkali EL ammari,30,True,architect,True,car,toyota,chr,2021,5,,,2024-01-17T00:53:01.050Z
 65a9978502478feb98fc38cf,aya cluster,25,False,student,True,car,audi,rs q4,2022,5,,,2024-01-18T21:26:29.925Z
 65a9a24802478feb98fc38d0,aya cluster,23,False,student,True,car,audi,rs q4,2022,4,,,2024-01-18T22:12:24.937Z
 65a9a25202478feb98fc38d1,aya cluster,21,False,student,True,car,audi,rs q4,2022,5,,,2024-01-18T22:12:34.698Z
 65a9a25b02478feb98fc38d2,aya cluster,21,False,student,True,car,audi,rs q4,2022,5,,,2024-01-18T22:12:43.458Z
-65a9a27602478feb98fc38d3,aya cluster,20,False,student,False,car,audi,rs q4,2022,5,,,2024-01-18T22:13:10.897Z
 65a9a31102478feb98fc38d4,aya cluster,20,False,student,True,car,audi,rs q4,2022,8,,,2024-01-18T22:15:45.440Z
 65a9a69502478feb98fc38d5,hicham cluster,50,True,teacher,True,car,dacia,logan,2021,6,,,2024-01-18T22:30:45.286Z
 65a9a69c02478feb98fc38d6,hicham cluster,53,True,teacher,True,car,dacia,logan,2021,6,,,2024-01-18T22:30:52.014Z
@@ -40,17 +38,9 @@ _id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,v
 65a9c1c902478feb98fc38fb,kammah cluster,22,False,student,False,car,tesla,s,2020,5,,,2024-01-19T00:26:49.902Z
 65a9c1d202478feb98fc38fc,kammah cluster,22,False,engineer,False,car,tesla,s,2020,5,,,2024-01-19T00:26:58.433Z
 65a9c1e202478feb98fc38fd,kammah cluster,24,False,engineer,False,car,tesla,s,2021,5,,,2024-01-19T00:27:14.677Z
-65a9c1ef02478feb98fc38fe,kammah cluster,24,False,employe,True,car,tesla,s,2021,5,,,2024-01-19T00:27:27.139Z
-65a9c22902478feb98fc38ff,ihsan cluster,35,True,architect,True,car,toyota,chr,2021,5,,,2024-01-19T00:28:25.420Z
-65a9c22d02478feb98fc3900,ihsan cluster,35,True,doctor,True,car,toyota,chr,2021,5,,,2024-01-19T00:28:29.532Z
-65a9c23902478feb98fc3901,ihsan cluster,35,True,doctor,True,car,toyota,chr,2020,5,,,2024-01-19T00:28:40.999Z
-65a9c24302478feb98fc3902,ihsan cluster,35,True,doctor,False,car,toyota,chr,2020,5,,,2024-01-19T00:28:51.502Z
-65a9c24b02478feb98fc3903,ihsan cluster,35,False,doctor,True,car,toyota,chr,2020,5,,,2024-01-19T00:28:59.438Z
 65aa90b65cb4f5930d2b2562,mohammed cluster,,,CEO,,car,,,,5,Marketing services,23,2024-01-19T15:09:42.348Z
 65aa90bf5cb4f5930d2b2563,mohammed cluster,,,CEO,,car,,,,5,Digital services,23,2024-01-19T15:09:51.353Z
 65aa90e25cb4f5930d2b2564,mohammed cluster,,,CEO,,car,,,,5,Port,25,2024-01-19T15:10:26.426Z
-65aa91c15cb4f5930d2b2565,mohammed cluster,,,CEO,,car,,,,5,services diverts,24,2024-01-19T15:14:09.959Z
-65aa91de5cb4f5930d2b2566,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,18,2024-01-19T15:14:38.087Z
 65aa91e55cb4f5930d2b2567,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,19,2024-01-19T15:14:45.223Z
 65aa92005cb4f5930d2b2568,mohammed cluster,,,CEO,,car,,,,5,IT services,12,2024-01-19T15:15:12.490Z
 65aa92175cb4f5930d2b2569,mohammed cluster,,,CEO,,car,,,,5,IT services,12,2024-01-19T15:15:35.626Z
@@ -81,8 +71,14 @@ _id,fullname,age,parent,occupation,www,vehicle_type,vehicle_make,vehicle_model,v
 65aa96295cb4f5930d2b2582,kamilia cluster,17,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:32:57.386Z
 65aa96325cb4f5930d2b2583,kamilia cluster,17,False,student,False,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:33:06.099Z
 65aa96445cb4f5930d2b2584,kamilia cluster,21,False,student,True,motorcycle,cappuccino,50cc,2019,2,,,2024-01-19T15:33:24.643Z
-65aadc741d099129aa714f80,mohammed cluster,,,CEO,,car,,,,5,services diverts,20,2024-01-19T20:32:52.199Z
-65aadc851d099129aa714f81,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,20,2024-01-19T20:33:09.852Z
-65aadc911d099129aa714f82,mohammed cluster,,,CEO,,car,,,,5,centre d'appel,21,2024-01-19T20:33:21.759Z
 65aadca61d099129aa714f83,mohammed cluster,,,CEO,,car,,,,5,Port,18,2024-01-19T20:33:42.110Z
 65aadcbb1d099129aa714f84,mohammed cluster,,,CEO,,car,,,,5,Digital services,18,2024-01-19T20:34:03.583Z
+65abf2f9bb5fc22fe3d2718b,Ihsan El Bakkali El Ammari,35,True,femme au foyer,False,car,toyota,chr,2021,5,,,2024-01-20T16:21:13.353Z
+65abf360bb5fc22fe3d2718c,Ihsan El Bakkali El Ammari,36,True,femme au foyer,False,car,toyota,chr,2021,5,,,2024-01-20T16:22:56.139Z
+65abf363bb5fc22fe3d2718d,Ihsan El Bakkali El Ammari,37,True,femme au foyer,False,car,toyota,chr,2021,5,,,2024-01-20T16:22:59.744Z
+65abf367bb5fc22fe3d2718e,Ihsan El Bakkali El Ammari,38,True,femme au foyer,False,car,toyota,chr,2021,5,,,2024-01-20T16:23:03.490Z
+65abf36abb5fc22fe3d2718f,Ihsan El Bakkali El Ammari,39,True,femme au foyer,False,car,toyota,chr,2021,5,,,2024-01-20T16:23:06.373Z
+65abf36ebb5fc22fe3d27190,Ihsan El Bakkali El Ammari,40,True,femme au foyer,False,car,toyota,chr,2021,5,,,2024-01-20T16:23:10.663Z
+65abf39ebb5fc22fe3d27191,Ihsan El Bakkali El Ammari,35,True,femme au foyer,False,car,toyota,chr,2021,6,,,2024-01-20T16:23:58.664Z
+65abf3d8bb5fc22fe3d27192,aya cluster,19,False,student,True,car,audi,rs q4,2020,5,,,2024-01-20T16:24:56.702Z
+65abf408bb5fc22fe3d27193,aya cluster,19,False,student,True,car,audi,rs q4,2020,5,,,2024-01-20T16:25:44.157Z

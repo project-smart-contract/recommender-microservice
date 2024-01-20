@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from airflow.decorators import dag, task
 from airflow.providers.mongo.hooks.mongo import MongoHook
 from src.ml.data.data_preprocessor import preprocess_data
+from src.ml.models.clustering import kmeans_clustering
 
 default_args = {
     'owner': 'admin',
@@ -73,22 +74,31 @@ def recommendation_system_pipeline():
             print(f"Error writing data to CSV -- {e}")
 
     @task()
-    def process_data():
-        preprocess_data()
+    def process_data(path):
+        preprocess_data(path)
+
+    @task()
+    def clustering():
+        kmeans_clustering()
 
     user_data_collection = fetch_new_data_from_mongo("user_data")
-    data = append_to_csv(user_data_collection, '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
+    user_data_csv = append_to_csv(user_data_collection,
+                                  '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
 
     # insurance_data_collection = fetch_new_data_from_mongo("insurance_policies")
-    # data = append_to_csv(insurance_data_collection,
-    #                      '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
+    # insurance_policy_csv = append_to_csv(insurance_data_collection,
+    #                                      '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
     #
     # contract_data_collection = fetch_new_data_from_mongo("contract_record")
-    # data = append_to_csv(contract_data_collection,
-    #                      '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
+    # contract_record_csv = append_to_csv(contract_data_collection,
+    #                                     '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
 
-    # Setting dependencies
-    data >> process_data()
+    processed_user_data = process_data('/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
+
+    clustering_task = clustering()
+
+    # Setting dependencies between tasks
+    var = user_data_csv >> processed_user_data >> clustering_task
 
 
 summary = recommendation_system_pipeline()

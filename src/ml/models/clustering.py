@@ -7,18 +7,18 @@ from src.ml.data.data_preprocessor import preprocess_datapoint
 
 
 def kmeans_clustering():
-    processed_data_path = '/Users/aya/Desktop/ML/insurance-recommender/data/processed/processed_user_data.csv'
-    processed_user_data = load_raw_data(processed_data_path)
+    processed_user_data = load_raw_data(
+        '/Users/aya/Desktop/ML/insurance-recommender/data/processed/processed_user_data.csv')
     features_for_clustering = processed_user_data[['PCA1', 'PCA2', 'PCA3']]
     kmeans = KMeans(n_clusters=9)
     processed_user_data['cluster'] = kmeans.fit_predict(features_for_clustering)
+
     # saving cluster assignments
     processed_user_data.to_csv('/Users/aya/Desktop/ML/insurance-recommender/data/processed/users_clusters.csv',
                                index=False)
 
-    model_save_path = '/Users/aya/Desktop/ML/insurance-recommender/src/ml/models/kmeans_model.joblib'
-
     # Save the model using joblib
+    model_save_path = '/Users/aya/Desktop/ML/insurance-recommender/src/ml/models/kmeans_model.joblib'
     joblib.dump(kmeans, model_save_path)
 
 
