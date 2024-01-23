@@ -1,19 +1,12 @@
 pipeline {
     agent any
     environment {
+        // Define any environment variables needed for the pipeline
         IMAGE_NAME = 'recommender-microservice'
         CONTAINER_NAME = 'recommender-microservice-container'
         DOCKERHUB_CREDENTIALS = credentials('dockerhub_amina')
     }
     stages {
-        stage('Install dependencies') {
-            steps {
-                script {
-                    echo 'Installing dependencies...'
-                    sh 'pip install -r requirements.txt'
-                }
-            }
-        }
         stage('Dockerize') {
             steps {
                 script {
