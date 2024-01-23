@@ -81,24 +81,24 @@ def recommendation_system_pipeline():
     def clustering():
         kmeans_clustering()
 
-    user_data_collection = fetch_new_data_from_mongo("user_data")
-    user_data_csv = append_to_csv(user_data_collection,
-                                  '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
+    # user_data_collection = fetch_new_data_from_mongo("user_data")
+    # user_data_csv = append_to_csv(user_data_collection,
+    #                               '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
 
     # insurance_data_collection = fetch_new_data_from_mongo("insurance_policies")
     # insurance_policy_csv = append_to_csv(insurance_data_collection,
     #                                      '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
     #
-    # contract_data_collection = fetch_new_data_from_mongo("contract_record")
-    # contract_record_csv = append_to_csv(contract_data_collection,
-    #                                     '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
+    contract_data_collection = fetch_new_data_from_mongo("contract_record")
+    contract_record_csv = append_to_csv(contract_data_collection,
+                                        '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
 
-    processed_user_data = process_data('/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
-
-    clustering_task = clustering()
+    # processed_user_data = process_data('/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
+    #
+    # clustering_task = clustering()
 
     # Setting dependencies between tasks
-    var = user_data_csv >> processed_user_data >> clustering_task
+    # var = user_data_csv >> processed_user_data >> clustering_task
 
 
 summary = recommendation_system_pipeline()

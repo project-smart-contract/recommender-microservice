@@ -23,7 +23,7 @@ def get_recommendations():
     try:
         user_data = request.get_json()
         print(user_data)
-        # user_id = str(users_collection.insert_one(user_data).inserted_id)
+        user_id = str(users_collection.insert_one(user_data).inserted_id)
 
         # Perform clustering
         cluster_assignment = perform_clustering(user_data)
@@ -34,7 +34,7 @@ def get_recommendations():
                 'success': True,
                 'cluster assignment': cluster_assignment,
                 'recommendations': recommendations,
-                # 'message': f'User added with ID: {user_id}'
+                'message': f'User added with ID: {user_id}'
         })
 
     except Exception as e:
