@@ -17,9 +17,9 @@ def preprocess_datapoint(raw_data):
     processed_data.fillna(value='unknown', inplace=True)
     # dropping these cols because we do not need it at this stage of code
     processed_data = processed_data.drop(['timestamp', 'fullname'], axis=1)
-    print(
-        "1- filling null values======================================================================================")
-    print(processed_data)
+    # print(
+    #     "1- filling null values======================================================================================")
+    # print(processed_data)
 
     economic_cars = ['dacia', 'renault', 'fiat', 'peugeot', 'ford', 'honda', 'hyundai', 'kia', 'nissan', 'subaru',
                      'toyota', 'volkswagen', 'cappuccino']
@@ -51,13 +51,13 @@ def preprocess_datapoint(raw_data):
         labels=['Vetuste', 'Recent']
     )
     processed_data = processed_data.drop(['vehicle_make', 'vehicle_model', 'vehicle_year'], axis=1)
-    print("2- categorizing car======================================================================================")
-    print(processed_data)
+    # print("2- categorizing car======================================================================================")
+    # print(processed_data)
 
     loaded_label_encoder = joblib.load('/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/label_encoder.joblib')
     loaded_label_encoder2 = joblib.load('/Users/aya/Desktop/ML/insurance-recommender/src/ml/data/label_encoder2.joblib')
-    print(loaded_label_encoder.classes_)
-    print(loaded_label_encoder2.classes_)
+    # print(loaded_label_encoder.classes_)
+    # print(loaded_label_encoder2.classes_)
 
     # label_encoder = preprocessing.LabelEncoder()
 
@@ -78,8 +78,8 @@ def preprocess_datapoint(raw_data):
     processed_data['business_field'] = loaded_label_encoder2.transform(processed_data['business_field'])
     # processed_data['business_field'] = label_encoder.transform(processed_data['business_field'])
     processed_data['business_field'].unique()
-    print("3- label encoder======================================================================================")
-    print(processed_data)
+    # print("3- label encoder======================================================================================")
+    # print(processed_data)
 
     numeric_columns = ['age', 'parent', 'occupation', 'www', 'vehicle_type', 'number_seats',
                        'business_field', 'number_insured_vehicles', 'vehicle_range', 'vehicle_category',
@@ -98,8 +98,8 @@ def preprocess_datapoint(raw_data):
     # Replace the original numeric columns with the scaled ones
     processed_data[numeric_columns] = scaled_df
 
-    print("3- Standardization======================================================================================")
-    print(processed_data)
+    # print("3- Standardization======================================================================================")
+    # print(processed_data)
 
     selected_columns = processed_data[numeric_columns]
 
@@ -113,8 +113,8 @@ def preprocess_datapoint(raw_data):
 
     # Concatenate the original DataFrame and dropping numeric_columns with the PCA DataFrame
     processed_data = pd.concat([processed_data.drop(columns=numeric_columns), pca_df], axis=1)
-    print("3- PCA======================================================================================")
-    print(processed_data)
+    # print("3- PCA======================================================================================")
+    # print(processed_data)
 
     return processed_data
 

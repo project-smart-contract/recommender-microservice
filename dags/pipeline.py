@@ -60,8 +60,7 @@ def recommendation_system_pipeline():
                     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
                     # Write the header -> to write the field names
-                    # if csvfile.tell() == 0:
-                    # writer.writeheader()
+                    writer.writeheader()
 
                     # Write the data
                     writer.writerows(data_list)
@@ -85,13 +84,13 @@ def recommendation_system_pipeline():
     # user_data_csv = append_to_csv(user_data_collection,
     #                               '/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
 
-    # insurance_data_collection = fetch_new_data_from_mongo("insurance_policies")
-    # insurance_policy_csv = append_to_csv(insurance_data_collection,
-    #                                      '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
-    #
-    contract_data_collection = fetch_new_data_from_mongo("contract_record")
-    contract_record_csv = append_to_csv(contract_data_collection,
-                                        '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
+    insurance_data_collection = fetch_new_data_from_mongo("insurance_policies")
+    insurance_policy_csv = append_to_csv(insurance_data_collection,
+                                         '/Users/aya/Desktop/ML/insurance-recommender/data/raw/insurance_policies.csv')
+
+    # contract_data_collection = fetch_new_data_from_mongo("contract_record")
+    # contract_record_csv = append_to_csv(contract_data_collection,
+    #                                     '/Users/aya/Desktop/ML/insurance-recommender/data/raw/contract_record.csv')
 
     # processed_user_data = process_data('/Users/aya/Desktop/ML/insurance-recommender/data/raw/user_data.csv')
     #

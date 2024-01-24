@@ -1,11 +1,29 @@
 # app.py
+import json
 from flask import Flask, request, jsonify
-
+import yaml
+from kafka import KafkaProducer
 from src.config.db import create_mongo_client, ping_mongo_deployment
 from src.ml.models.clustering import perform_clustering
 from src.ml.models.collaborative_filtering import collaborative_filtering
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
+
+
+# def load_kafka_config():
+#     with open('/Users/aya/Desktop/ML/insurance-recommender/config/kafka_config.yaml', 'r') as config_file:
+#         kafka_configuration = yaml.safe_load(config_file)
+#     return kafka_configuration
+#
+#
+# kafka_config = load_kafka_config()
+# bootstrap_servers = kafka_config['kafka']['bootstrap_servers']
+# topic = kafka_config['kafka']['topic']
+#
+# producer = KafkaProducer(bootstrap_servers=bootstrap_servers)
 
 # connection to db
 mongo_client = create_mongo_client()
@@ -27,14 +45,17 @@ def get_recommendations():
 
         # Perform clustering
         cluster_assignment = perform_clustering(user_data)
+        print("~~~~~~~~~~~~~~~~~~~~~~~",cluster_assignment)
         # Generate user-item matrix and collaborative filtering recommendations
         recommendations = collaborative_filtering(cluster_assignment)
+        print("~~~~~~~~~~~~~~~~~~~~~~~",recommendations)
+        # producer.send('recommendation_topic', json.dumps(recommendations).encode('utf-8'))
 
         return jsonify({
-                'success': True,
-                'cluster assignment': cluster_assignment,
-                'recommendations': recommendations,
-                'message': f'User added with ID: {user_id}'
+            'success': True,
+            'cluster assignment': cluster_assignment,
+            'recommendations': recommendations,
+            'message': f'User added with ID: {user_id}'
         })
 
     except Exception as e:
